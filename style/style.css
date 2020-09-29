@@ -1,0 +1,515 @@
+/*resets*/
+* {
+    box-sizing: border-box;
+}
+
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font: 28px/1.571 'Poppins', Arial, sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    position: relative;
+    overflow:hidden; 
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1210px;
+    margin-left: auto;
+    margin-right: auto;   
+    border: 1px solid red;  
+}
+
+.container.small {
+    max-width: 1000px;
+}
+
+.container.big {
+    max-width: 1800px;
+    padding:0;
+}
+.footer-nav a 
+/* second style of doing clearfix */
+.container:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+    margin: 0 0 20px;
+    line-height: 1.21;
+}
+
+h1 {
+    font-size: 38px;font-size: 38px;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+h2 {
+    font-size: 86px;
+    line-height: 1.04;
+    letter-spacing: 3px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+p {
+    margin: 0 0 25px;
+    color:#666666;
+    letter-spacing:0.06em;
+}
+li{
+    list-style: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+span.small{
+    font-size:16px;
+}
+span.medium{
+    font-size:20px;
+}
+/*main global ends*/
+/*custom styiling*/
+
+.heading-info{
+    color:#303030;
+    font-size:18px;
+    line-height: 2.44;
+    font-weight:600;
+    display:block;
+    text-transform: uppercase;
+    padding-top:110px;
+    padding-bottom: 11px;
+    letter-spacing: 0.2em;
+}
+
+
+/*nav*/
+.header{  
+    color:white;
+    position: absolute;
+    left:0;
+    right:0;
+    top:33px; 
+    z-index:1;
+}
+
+/*containers*/
+.wrapper{
+    max-width:1880px;
+    margin:auto;
+    
+}
+
+.small{
+    text-align: center;
+}
+
+.icons{
+    font-size:15px;
+}
+/*banner*/
+.banner{
+    background-image: url("../assets/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:white; 
+    position: relative;
+}
+.banner-text{
+    height: 718px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-text h1{
+    padding-top:51px;
+}
+
+
+.navigation{
+    position: absolute;
+    bottom:-5px;
+    left:0;
+    right:0;
+    text-align: center;
+}
+.navigation .nav li{
+    display:inline-block;
+    list-style: none;
+    padding: 0 23px;
+    text-transform: uppercase;
+    color:white;
+}
+.navigation .nav a{
+    font-size:16px;
+    letter-spacing: 0.12em;
+}
+
+/*intro-text*/
+
+.intro-text .article-text .heading-info{
+ padding-top:99px; /*question on ps it has 113px but what about extra padding*/ /*Ans: Always make a modular component so that u can use it again */
+ padding-bottom:26px;
+}
+
+.intro-text p{
+    max-width: 659px;
+    margin:auto;
+    padding-bottom:110px;
+    font-weight:300;
+}
+
+/*ideology section*/
+.ideology-section{
+    position: relative;
+    overflow:hidden;
+}
+.ideology-section .left-col{
+    width:23%;
+    float:left; 
+}
+.ideology-section .right-col{
+    float:right;
+    text-transform: uppercase;
+    width:63%;
+}
+
+.ideology-section blockquote{
+    font-size: 58px;
+    font-weight:600;
+    padding: 369px 0 0 283px;
+    line-height: 1.24;
+    margin-right: -312px;
+    position: relative;
+    z-index: 2;
+}
+.ideology-section .contents{
+    margin-right: -102px;
+    padding-left: 109px;
+}
+.orange_col{
+    color:#e98457;
+}
+.asterix{
+    width:32%;
+    position:absolute;
+    top:0;
+    right:0;
+    line-height: 1.065;
+    letter-spacing: 0.2em;
+}
+.ideology-section .image{
+    position: absolute;
+    bottom: 36px;
+    left: -22px;
+    z-index: 1;
+    opacity: 0.5;
+}
+.ideology-section .shape-1{
+    position:absolute;
+    z-index:-1;
+}
+
+.shape-1{
+    background-color:#1bf1ad;
+    width:657px;
+    height:675px;
+    position: absolute;
+    top:0;
+    left:0;
+}
+/*team-section*/
+.team-section{
+    padding-bottom:110px;
+}
+.team-section .team-section-header{
+    margin-right: -232px;
+    margin-left: -61px;
+}
+.team-section .heading-info{
+    padding-top: 132px;
+    padding-bottom: 0;
+}
+.team-section h2{
+    padding-bottom:33px;
+    text-transform: uppercase;
+}
+.team-contents .col{
+    float: left;
+    width:33.33%;
+    padding: 23px 0;
+}
+.team-contents .col:hover{
+    background-color: #1bf1ad;
+    color:white;
+}
+.team-contents .col .image{
+    float:left;
+    padding-left: 44px;
+}
+.team-contents .col .information{
+    float:left;
+    padding-left: 23px;
+    margin-top:-2px;
+}
+.team-contents{
+    overflow:hidden;
+}
+.team-contents .icons{
+    margin:0 0 0 0;
+    padding:0;
+}
+.team-contents .icons li{
+    display:inline-block;
+    padding-right:12px;
+}
+.team-contents .icons li a{
+    color:black;
+}
+.team-contents .icons li a:hover{
+    color:white;
+}
+.team-contents .name{
+    display:block;
+}
+
+.team-contents .position{
+    display:block;
+}
+
+
+/*work-section*/
+.work-section{
+    position: relative;
+}
+.work-section .work-heading{
+    width:60%;
+    text-align: center;
+    margin: auto;
+    text-transform: uppercase;
+    padding-bottom: 81px;
+}
+
+.work-section .carousel .image{
+    width:32%; 
+}
+.work-section .carousel{
+    overflow:hidden;
+    padding-bottom: 110px;
+    display: flex;
+    justify-content: space-around;
+    max-width:78%;
+    margin:auto;
+}
+.work-section .left{
+position:absolute;
+bottom: 291px;
+left: 36px;
+display:inline-block;
+}
+.work-section .right{
+position: absolute;
+bottom: 291px;
+right: 36px;
+display:inline-block;
+}
+/*footer*/
+
+.footer-contents{
+    overflow: hidden;
+    padding-top: 67px;
+}
+.footer-logo{
+    border:2px solid black;
+    padding: 13px 15px 1px 30px;
+    display:inline-block;
+    margin-right: 66px;
+    margin-top: 0px;
+    
+}
+
+footer .contact-text{
+    margin-right: 42px;
+    font-size:20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+footer .left-col{
+    float:left;
+    width:70%;
+    padding-left:71px;
+}
+footer .right-col{
+    float:right;
+    width:30%;
+    padding: 25px 0 0 0;
+}
+
+.footer-nav li{
+    display:inline-block;
+    list-style: none;
+    padding-right:30px;
+    text-transform: uppercase;
+    color:white;
+}
+.footer-logo{
+    margin-right:37px;
+}
+.footer-nav a{
+    font-size:14px;
+}
+.footer-nav{
+    padding: 4px 0 78px 7px;
+    letter-spacing: 2px;
+}
+footer a{
+    color:black;
+}
+
+.custom-prop{
+    line-height: 1.9;
+    font-size:13px;
+}
+.custom-prop .contact-phone{
+    padding-right: 25px;
+}
+.footer-icons{
+    margin:0;
+    padding: 0 0 29px 0;
+    font-size: 13px;
+}
+footer .footer-icons li{
+    display:inline-block;
+}
+
+footer .footer-icons .contact-info{
+    line-height: 1;
+}
+
+/*responsive*/
+
+@media (max-width:1240px){
+
+.intro-text .article-text .heading-info {
+    padding-top: 90px;
+}
+.navigation .nav li{
+    padding: 0 13px;
+    font-size:13px;
+}
+.ideology-section .contents {
+    padding-left: 9px;
+}
+.ideology-section blockquote{
+    font-size:38px;
+    margin-right: -231px;
+    padding: 244px 0 0 197px;
+}
+.ideology-section .image{
+    bottom: 25px;
+    left: -22px;
+    width:44%;
+}
+.ideology-section .right-col{
+    width: 57%;
+}
+.ideology-section .shape-1{
+    height:426px;
+    width:426px;
+}
+h1 {
+    font-size: 38px;font-size: 38px;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+h2 {
+    font-size: 55px;
+    line-height: 1.04;
+    letter-spacing: 3px;
+}
+.intro-text p{
+    padding-bottom:90px;
+}
+.ideology-section .heading-info{
+    padding-top: 90px;
+}
+.ideology-section{
+    padding-bottom: 90px;
+}
+.team-section .heading-info{
+    padding-top:90px;
+}
+.team-section .team-section-header {
+    margin-right: 0px;
+    margin-left: 0;
+}
+.team-section{
+    margin-bottom: 90px;
+    padding-bottom: 0px;
+}
+.work-section .heading-info{
+    padding-top:90px;
+}
+.work-section .left, .work-section .right{
+    bottom:238px;
+}
+.footer-nav a{
+    font-size: 12px;
+}
+footer .left-col{
+    max-width:82%;
+    padding-left:56px;
+}
+footer .right-col{
+    max-width:18%;
+    margin-right: 82px;
+}
+}
+
+/*
+@media (max-width: 1204px) {
+    body {
+        background: yellow;
+    }
+   
+  
+
+@media (max-width: 1024px) {
+    body {
+        background: blue;
+    }
+}
+
+
+@media (max-width: 768px) {
+    body {
+        background: pink;
+    }
+}
+*/
