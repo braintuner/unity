@@ -22,20 +22,11 @@ body {
 .container {
     padding-left: 20px;
     padding-right: 20px;
-    max-width: 1210px;
+    max-width:1220px;
     margin-left: auto;
     margin-right: auto;   
-     
-}
+    }
 
-.container.small {
-    max-width: 1000px;
-}
-
-.container.big {
-    max-width: 1800px;
-    padding:0;
-}
 .footer-nav a 
 /* second style of doing clearfix */
 .container:after {
@@ -82,6 +73,9 @@ img {
     height: auto;
     vertical-align: top;
 }
+ul{
+    padding-left:0;
+}
 span.small{
     font-size:16px;
 }
@@ -89,8 +83,7 @@ span.medium{
     font-size:20px;
 }
 /*main global ends*/
-/*custom styiling*/
-
+/*custom styling*/
 .heading-info{
     color:#303030;
     font-size:18px;
@@ -98,11 +91,22 @@ span.medium{
     font-weight:600;
     display:block;
     text-transform: uppercase;
-    padding-top:110px;
-    padding-bottom: 11px;
+    margin-bottom: 24px;
     letter-spacing: 0.2em;
 }
 
+.content-wrapper{
+    padding: 97px 0;
+    max-width: 100%;
+    
+
+} /*spacing between sections*/
+
+.team .content-wrapper-col:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 /*nav*/
 .header{  
@@ -113,19 +117,16 @@ span.medium{
     top:33px; 
     z-index:1;
 }
-
 /*containers*/
 .wrapper{
     max-width:1880px;
     margin:auto;
     
 }
-
 .small{
     text-align: center;
 }
-
-.icons{
+.header .icons{
     font-size:15px;
 }
 /*banner*/
@@ -144,9 +145,8 @@ span.medium{
 }
 .banner-text h1{
     padding-top:51px;
+    max-width: 60%;
 }
-
-
 .navigation{
     position: absolute;
     bottom:-5px;
@@ -167,106 +167,136 @@ span.medium{
 }
 
 /*intro-text*/
-
-.intro-text .article-text .heading-info{
- padding-top:99px; /*question on ps it has 113px but what about extra padding*/ /*Ans: Always make a modular component so that u can use it again */
- padding-bottom:26px;
+.intro-text .content-wrapper{
+    max-width:70%;
+    margin:auto;
 }
-
+.intro-text{
+    text-align:center;
+}
+.intro-text .article-text .heading-info{
+ padding:0 0 0 0;
+ margin-bottom: 24px;
+}
 .intro-text p{
     max-width: 659px;
     margin:auto;
-    padding-bottom:110px;
     font-weight:300;
 }
 
+
 /*ideology section*/
 .ideology-section{
-    position: relative;
     overflow:hidden;
 }
+.ideology-section .content-wrapper:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
 .ideology-section .left-col{
-    width:23%;
+    width:43%;
     float:left; 
+    position:relative;
 }
+
+    .ideology-section .left-col:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .ideology-section .left-col-content{
+        font-size: 43px;
+        font-weight:600;
+        padding:0 10px;
+        margin-top: 336px;
+        line-height: 1.2;
+        max-width: 59%;
+        float:right;
+    }
+    
+    .ideology-section .heading-info, .team .heading-info{
+        margin-top: 22px;
+        margin-bottom: 14px;
+    }
+    
+    
+    .left-col-content p{
+        color:black;
+        font-size:58px;
+
+    }
+    .ideology-section .image{
+        position:absolute;
+        z-index: -1;
+        top: -90px;
+        left: -10px;
+    }
+
+
 .ideology-section .right-col{
-    float:right;
+    float:left;
     text-transform: uppercase;
-    width:63%;
+    width:57%;
+
+}
+    .ideology-section .right-col span{
+        color:#e98457
+    }
+.ideology-section .article{
+    padding-left: 30px;
 }
 
-.ideology-section blockquote{
-    font-size: 58px;
-    font-weight:600;
-    padding: 369px 0 0 283px;
-    line-height: 1.24;
-    margin-right: -312px;
-    position: relative;
-    z-index: 2;
-}
-.ideology-section .contents{
-    margin-right: -102px;
-    padding-left: 109px;
-}
-.orange_col{
-    color:#e98457;
-}
-.asterix{
-    width:32%;
-    position:absolute;
-    top:0;
-    right:0;
-    line-height: 1.065;
-    letter-spacing: 0.2em;
-}
-.ideology-section .image{
-    position: absolute;
-    bottom: 36px;
-    left: -22px;
-    z-index: 1;
-    opacity: 0.5;
-}
-.ideology-section .shape-1{
-    position:absolute;
-    z-index:-1;
-}
 
-.shape-1{
-    background-color:#1bf1ad;
-    width:657px;
-    height:675px;
-    position: absolute;
-    top:0;
-    left:0;
-}
 /*team-section*/
-.team-section{
-    padding-bottom:110px;
+.team .article{
+    text-transform: uppercase;  
 }
-.team-section .team-section-header{
-    margin-right: -232px;
-    margin-left: -61px;
+/*please not the design has less padding bottom on fthe heading- info*/
+.team .content-wrapper{
+    padding-top: 51px;
 }
-.team-section .heading-info{
-    padding-top: 132px;
-    padding-bottom: 0;
+.team .team-information .article{
+    margin-right: -208px;
+    margin-left: -58px;
+    padding-right:10px;
+    padding-left:10px;
 }
-.team-section h2{
-    padding-bottom:33px;
-    text-transform: uppercase;
+
+#cross{
+    visibility: hidden;
+}
+
+.team .team-contents .icons a{
+    color:black;
+}
+
+.team-contents{
+    overflow:hidden;
+    display: flex;
+    justify-content: space-around;
 }
 .team-contents .col{
-    float: left;
-    width:33.33%;
-    padding: 23px 0;
+    float:left;
+    max-width:33.33%;
 }
+
 .team-contents .col:hover{
     background-color: #1bf1ad;
     color:white;
 }
+.team .article h2{
+    padding-right: 90px;
+}
 .team-contents .col .image{
-    float:left;
-    padding-left: 44px;
+    float:left;   
+}
+.team-contents .col-wrap{
+    padding: 24px 45px 27px 44px;
+    overflow: hidden;
 }
 .team-contents .col .information{
     float:left;
@@ -274,6 +304,7 @@ span.medium{
     margin-top:-2px;
 }
 .team-contents{
+    margin: 24px -68px;
     overflow:hidden;
 }
 .team-contents .icons{
@@ -297,219 +328,482 @@ span.medium{
 .team-contents .position{
     display:block;
 }
+    
 
+/*our work*/
 
-/*work-section*/
-.work-section{
-    position: relative;
+.work .content-wrap{
+    padding-top:100px;
 }
-.work-section .work-heading{
-    width:60%;
-    text-align: center;
-    margin: auto;
-    text-transform: uppercase;
-    padding-bottom: 81px;
+.work .article{
+    text-align:center;
 }
 
-.work-section .carousel .image{
-    width:32%; 
-}
-.work-section .carousel{
-    overflow:hidden;
-    padding-bottom: 110px;
-    display: flex;
+    /*our work carousel*/
+.work .carousel:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+
+.work .carousel{
+    display:flex;
     justify-content: space-around;
-    max-width:78%;
-    margin:auto;
-}
-.work-section .left{
-position:absolute;
-bottom: 291px;
-left: 36px;
-display:inline-block;
-}
-.work-section .right{
-position: absolute;
-bottom: 291px;
-right: 36px;
-display:inline-block;
-}
+    margin: 74px -277px;
+}   
+
+
 /*footer*/
 
-.footer-contents{
-    overflow: hidden;
-    padding-top: 67px;
+footer .content-wrap{
+    padding:115px 0; 
 }
-.footer-logo{
-    border:2px solid black;
-    padding: 13px 15px 1px 30px;
+
+footer .content-wrap:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+footer .contact-text, footer .footer-logo{
     display:inline-block;
-    margin-right: 66px;
-    margin-top: 0px;
-    
+    vertical-align: middle;
 }
 
-footer .contact-text{
-    margin-right: 42px;
-    font-size:20px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    display: inline-block;
-}
-
-footer .left-col{
-    float:left;
-    width:70%;
-    padding-left:71px;
-}
-footer .right-col{
-    float:right;
-    width:30%;
-    padding: 25px 0 0 0;
-}
-
-.footer-nav li{
-    display:inline-block;
-    list-style: none;
-    padding-right:30px;
-    text-transform: uppercase;
-    color:white;
-}
-.footer-logo{
-    margin-right:37px;
-}
-.footer-nav a{
-    font-size:14px;
-}
-.footer-nav{
-    padding: 4px 0 78px 7px;
-    letter-spacing: 2px;
-}
 footer a{
     color:black;
 }
+footer nav li{
+    display:inline-block;
+    text-transform:uppercase;
+}
+footer nav{
+    padding-top: 27px;
+}
 
-.custom-prop{
-    line-height: 1.9;
-    font-size:13px;
+footer nav a{
+    font-size:14px;
+    letter-spacing: 2px;
+    padding-right:37px;
 }
-.custom-prop .contact-phone{
-    padding-right: 25px;
+footer nav, footer .r-col{
+    font-size: 14px;
 }
-.footer-icons{
-    margin:0;
-    padding: 0 0 29px 0;
-    font-size: 13px;
+footer .l-col{
+    float:left;
+    max-width:70%;
 }
-footer .footer-icons li{
+
+footer .l-col .contact-text, footer .l-col .headline a{
+    font-size:20px;
+}
+
+footer .r-col{
+    float:right;
+    max-width:30%;
+}
+
+footer .footer-logo{
+    padding: 16px 21px 0 19px;
+    border:1px solid black;
+    margin-right:63px;   
+    display:inline-block;
+    padding:16px 28px 0px 25px;
+}
+
+.headline .contact-text{
+    font-size:20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+footer .r-col aside ul {
+    margin: 19px 0 35px 0;
+}
+
+footer .r-col .icons li{
     display:inline-block;
 }
 
-footer .footer-icons .contact-info{
-    line-height: 1;
+footer aside{
+    margin-right: -13px;
 }
+footer .contact-phone, footer .contact-info{
+    display:block;
+}
+
+footer .r-col .contact-phone{
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*responsive*/
 
-@media (max-width:1240px){
-
-.intro-text .article-text .heading-info {
-    padding-top: 90px;
+@media (max-width:1919px){
+    
+    .ideology-section .left-col-content {
+        margin-top: 398px;
+    }
+    h2{
+        font-size:68px;
+    }
+    .left-col-content p {
+        color: black;
+        font-size: 45px;
+    }
+    .ideology-section .left-col-content {
+        margin-top: 300px;
+    }
+    .work .carousel{
+        margin: 74px -103px;
+    }
+    footer .r-col aside ul {
+        margin: 19px 0 26px 0;
+    }  
+    .content-wrapper {
+        padding: 70px 0;
+        max-width: 100%;
+    } 
+    
+    .ideology-section .article{
+        margin-top: -54px;
+    }
+    .work .content-wrap {
+        padding-top: 22px;
+    }
+    footer .content-wrap {
+        padding: 57px 0;
+    }
+    
 }
-.navigation .nav li{
+
+
+@media (max-width:1439px){
+    body {
+        margin: 0;
+        font: 22px/1.571 'Poppins', Arial, sans-serif;
+    }
+    
+    h2{
+        font-size:57px;
+    }
+    .left-col-content p {
+        color: black;
+        font-size: 38px;
+    }
+
+    .ideology-section .left-col-content {
+        margin-top: 246px;
+    }
+    .team-information h2{
+        padding-right: 90px;
+    }
+    .work .carousel {
+        margin: 74px -98px;
+    }
+    .team .team-information .article {
+        margin-right: -181px;
+        margin-left: -12px
+    }
+    .work .article h2{
+        margin-right:3px;
+    }
+    .work .carousel {
+        margin: 73px 8px;
+    }
+    .work .carousel .image{      
     padding: 0 13px;
-    font-size:13px;
-}
-.ideology-section .contents {
-    padding-left: 9px;
-}
-.ideology-section blockquote{
-    font-size:38px;
-    margin-right: -231px;
-    padding: 244px 0 0 197px;
-}
-.ideology-section .image{
-    bottom: 25px;
-    left: -22px;
-    width:44%;
-}
-.ideology-section .right-col{
-    width: 57%;
-}
-.ideology-section .shape-1{
-    height:426px;
-    width:426px;
-}
-h1 {
-    font-size: 38px;font-size: 38px;
-    font-weight: normal;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-}
-
-h2 {
-    font-size: 55px;
-    line-height: 1.04;
-    letter-spacing: 3px;
-}
-.intro-text p{
-    padding-bottom:90px;
-}
-.ideology-section .heading-info{
-    padding-top: 90px;
-}
-.ideology-section{
-    padding-bottom: 90px;
-}
-.team-section .heading-info{
-    padding-top:90px;
-}
-.team-section .team-section-header {
-    margin-right: 0px;
-    margin-left: 0;
-}
-.team-section{
-    margin-bottom: 90px;
-    padding-bottom: 0px;
-}
-.work-section .heading-info{
-    padding-top:90px;
-}
-.work-section .left, .work-section .right{
-    bottom:238px;
-}
-.footer-nav a{
-    font-size: 12px;
-}
-footer .left-col{
-    max-width:82%;
-    padding-left:56px;
-}
-footer .right-col{
-    max-width:18%;
-    margin-right: 82px;
-}
-}
-
-/*
-@media (max-width: 1204px) {
-    body {
-        background: yellow;
     }
+    footer aside {
+        margin-right: 26px;
+    }
+    footer .l-col {
+        padding-left: 6px;
+    }
+    footer nav a {
+        font-size: 12px;
+    }
+    .intro-text .content-wrapper {
+        max-width: 48%;
+    }
+    footer .r-col aside ul {
+        margin: 13px 0 26px 0;
+    }
+    .team .content-wrapper {
+        padding-top: 11px;
+    }
+}
+
+@media (max-width:1239px){
+
+    body{
+        font-size:19px;
+    }
+    h2{
+        font-size:47px;
+    }
+    .banner-text h1 {
+        padding-top: 51px;
+        max-width: 82%;
+    }
+    .left-col-content p {
+        color: black;
+        font-size: 31px;
+    }
+
+    footer nav a {
+        font-size: 14px;
+        letter-spacing: 2px;
+        padding-right: 25px;
+    }
+    footer nav a {
+        font-size: 12px;  
+    } 
+
+    footer nav, footer .r-col {
+        font-size: 12px;
+    }
+    .team .team-information .article {
+        margin-right: -57px;
+    }
+    .team-information{
+        margin: 0 29px; 
+        
+    }
+    .team-contents .col-wrap .information{
+        padding-left:0;
+    }
+
+    .team-contents .position{
+        padding-bottom: 8px;
+    }
+
+    .team-contents .name{
+        padding-top: 12px;
+    }
+    .team-contents .col-wrap {
+        padding: 24px 45px 27px 89px;
+        text-align: center;
+    }
+    footer .l-col .contact-text, footer .l-col .headline a {
+        padding-top: 20px;
+    }
+    footer nav {
+        padding-top: 12px;
+    }
+    .ideology-section .article {
+        margin-top: -79px;
+    }
+
+    .left-col .left-col-content p{
+        margin-top: -55px;
+    }
+    .content-wrapper {
+        padding: 55px 0;   
+    }
+    .navigation .nav li {
+        padding: 0 14px;
+    }
+
+
+@media (max-width: 1023px) {
    
-  
+    .banner-text h1{
+        max-width:100%;
+    }
+    .navigation .nav a {
+        font-size: 14px;
+    }
+    .left-col .left-col-content p {
+        margin-top: -216px;
+        margin-left:-60px;
+    }
+    .team-contents {
+        margin: 24px -50px 11px -95px;
+        overflow: hidden;
+    }
 
-@media (max-width: 1024px) {
-    body {
-        background: blue;
+    footer .l-col, footer .r-col{
+        float:none;
+        max-width:100%;
+    }
+
+    footer .l-col, footer .r-col{
+        text-align: center;
+    }
+    .ideology-section .image {
+        left: -123px;
+    }
+
+    footer .contacts{
+        overflow: hidden;
+        margin-top: 33px;
+    }
+    footer .contacts .footer-icons{
+        float:left;
+    }
+    footer .custom-prop{
+        float:right;
+    }
+
+    footer .footer-logo{
+        padding: 16px 28px 11px 25px;
+    }   
+    footer .l-col .contact-text, footer .l-col .headline a {
+        padding-top: 34px;
     }
 }
-
 
 @media (max-width: 768px) {
-    body {
-        background: pink;
-    }
+
+h2{
+    font-size:28px;
 }
-*/
+.banner .navigation {
+    background: red;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display:none;
+}
+
+.banner .navigation ul{
+    margin-top:100px;
+}
+
+.banner .navigation li{
+    display:block;
+    padding:18px; 
+}
+
+.banner .navigation li a{
+    font-size:24px;
+}
+
+.bannner .navigation #cross{
+    visibility:visible;
+    position: absolute;
+    top: 13px;
+    right: 21px;
+}
+.banner .navigation {
+    background: #f8f8f8;   
+}
+
+.banner .navigation a{
+    color:black;
+}
+#cross{
+    visibility:visible;
+    color:black;
+    position:absolute;
+    top: 15px;
+    right: 29px;
+    font-size: xx-large;  
+}
+.banner-text h1{
+    padding-top:0;
+}
+.intro-text .content-wrapper {
+    max-width: 91%;
+}
+.ideology-section .left-col, .ideology-section .right-col{
+    float:none;
+    width:100%;
+}
+.left-col .left-col-content p {
+    margin-top: 205px;
+}
+.right-col{
+    margin-top:104px;
+}    
+.ideology-section .left-col-content{
+    float:none;
+    margin-top:0;
+    max-width:100%;
+    padding: 0px 20px;
+}
+.ideology-section .image{
+    position:static;
+}
+.left-col .left-col-content p {
+    margin-top: 0;
+    margin-left: 0;
+    font-size: 24px;
+}
+.banner-text {
+    height: 457px;
+}
+.banner-text h1 {
+    padding-top: 48px;
+}
+.intro-text .content-wrapper {
+    max-width: 100%;
+}
+
+.team-information{
+    margin:0;
+}
+.ideology-section .article {
+    padding-left: 20px;
+}
+.team .team-information .article {
+    margin-right: 0;
+}
+.team-information .article h2{
+    padding-right: 0;
+}
+.team-contents{
+    display:block;
+    margin:0;
+}
+.team-contents .col{
+    float:none;
+    max-width: 100%;;
+}
+.team-contents .col-wrap{
+    padding:0 0 0 0; margin-bottom:49px;
+}
+footer .footer-logo{
+    margin-right: 0;
+}
+footer nav{
+    display:none;
+}
+footer .r-col ul, footer .footer-icons{
+    font-size: 22px;
+}
+footer .contacts .footer-icons {
+    float: none;
+}
+footer .custom-prop{
+    float:none;
+}
+.work .carousel {
+    display:block;
+}
+.work .carousel .image {
+    padding: 10px 13px;
+}
+.team-contents .col .information {
+    float: none;
+}.team-information .article h2 {
+    padding-bottom: 32px;
+}
+}
+}
