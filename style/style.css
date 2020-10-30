@@ -117,6 +117,11 @@ span.medium{
     top:33px; 
     z-index:1;
 }
+
+.hamburger{
+    display:none;
+}
+
 /*containers*/
 .wrapper{
     max-width:1880px;
@@ -710,7 +715,7 @@ h2{
 }
 #cross{
     visibility:visible;
-    color:black;
+    color: white;
     position:absolute;
     top: 15px;
     right: 29px;
@@ -774,7 +779,8 @@ h2{
 }
 .team-contents .col{
     float:none;
-    max-width: 100%;;
+    max-width: 400px;
+    margin:auto;
 }
 .team-contents .col-wrap{
     padding:0 0 0 0; margin-bottom:49px;
@@ -796,6 +802,7 @@ footer .custom-prop{
 }
 .work .carousel {
     display:block;
+    text-align: center;
 }
 .work .carousel .image {
     padding: 10px 13px;
@@ -805,5 +812,24 @@ footer .custom-prop{
 }.team-information .article h2 {
     padding-bottom: 32px;
 }
+
+
 }
 }
+
+
+
+
+
+/*functionality*/
+
+.show{
+    display:block;
+}
+.hide{
+    display:none;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
